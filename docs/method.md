@@ -60,6 +60,3 @@ Thresholds are team decisions, not statistical results. They should be tested ag
 - **Rules alongside the score:** a single number can hide a close call between the top two clusters, so the rules flag it.
 
 For known limitations, see the README.
-
-
-Before committing, check that the weighting and threshold descriptions are safe to share. If not, replace the table with one sentence: "Thresholds were set by the team and checked against past decisions."
