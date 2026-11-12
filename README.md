@@ -56,8 +56,6 @@ The table below is generated from synthetic data and shows the kind of output th
 
 ├── README.md
 ├── requirements.txt
-├── notebooks/
-│   └── alignment_demo.ipynb     # Walkthrough on synthetic data
 └── docs/method.md                # Method notes and design decisions
 
 ## Sample Code
@@ -79,26 +77,6 @@ weights = {"demand_need": 0.6, "when": 0.4}
 scores = {d: cosine_sim(np.array(local[d]), np.array(global_cluster[d])) for d in weights}
 alignment = sum(scores[d] * weights[d] for d in weights)
 print(round(alignment, 3))
-```
-
-## How to Run the Demo
-
-**Option 1: Google Colab (no installation)**
-
-Open the notebook directly in your browser:
-
-(https://colab.research.google.com/github/tam-87/consumer-demand-alignment-demo/blob/main/notebooks/alignment_demo.ipynb)
-
-**Option 2: Run locally**
-
-Requires Git and Python 3.9 or later.
-
-```
-bash
-git clone https://github.com/tam-87/consumer-demand-alignment-demo.git
-cd consumer-demand-alignment-demo
-pip install -r requirements.txt
-jupyter notebook notebooks/alignment_demo.ipynb
 ```
 
 ## Limitations
